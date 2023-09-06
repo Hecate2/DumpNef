@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <AssemblyName>dumpnef</AssemblyName>
@@ -17,19 +17,22 @@
     <RepositoryUrl>https://github.com/devhawk/DumpNef.git</RepositoryUrl>
     <RootNamespace>DevHawk.DumpNef</RootNamespace>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.0.2" />
-    <PackageReference Include="Nito.Disposables" Version="2.3.0" />
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.0" />
+    <PackageReference Include="Neo" Version="3.6.0" />
+    <PackageReference Include="Nito.Disposables" Version="2.5.0-alpha.1" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="OneOf" Version="3.0.255" />
+    <PackageReference Include="System.IO.Abstractions" Version="19.2.69" />
   </ItemGroup>
 
-  <PropertyGroup>
+  <!--<PropertyGroup>
     <BlockchainToolkitLibraryVersion>3.5.32</BlockchainToolkitLibraryVersion>
     <BlockchainToolkitLibraryLocalPath>..\lib-bctk</BlockchainToolkitLibraryLocalPath>
-    <!-- <BlockchainToolkitLibraryVersion>local</BlockchainToolkitLibraryVersion> -->
+    --><!-- <BlockchainToolkitLibraryVersion>local</BlockchainToolkitLibraryVersion> --><!--
   </PropertyGroup>
 
   <Choose>
@@ -38,12 +41,8 @@
         <ProjectReference Include="$(BlockchainToolkitLibraryLocalPath)\src\bctklib\bctklib.csproj" />
       </ItemGroup>
     </When>
-    <Otherwise>
-      <ItemGroup>
-        <PackageReference Include="Neo.BlockchainToolkit.Library" Version="$(BlockchainToolkitLibraryVersion)" />
-      </ItemGroup>
-    </Otherwise>
-  </Choose>
+    <Otherwise />
+  </Choose>-->
 
 
 </Project>
