@@ -1,3 +1,7 @@
+#### Inherited from [devhawk](https://github.com/devhawk/DumpNef/) for contiunous support on Neo >= 3.6.0
+
+Almost all the codes are simply copied. Dependencies have been simplified.
+
 # DumpNef
 
 Simple command line utility to dump [Neo N3](https://neo.org/blog/details/4225?language=en) smart contract files to the console. 
