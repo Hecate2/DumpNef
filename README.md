@@ -12,7 +12,7 @@ To install from local source codes:
 
 ```shell
 dotnet pack
-dotnet tool install -g DevHawk.DumpNef --add-source bin/Debug --version 3.6.0-preview-g5b92675c09
+dotnet tool install -g DevHawk.DumpNef --add-source bin/Release --version 3.7.0
 ```
 
 > To install **old versions** from nuget.org:

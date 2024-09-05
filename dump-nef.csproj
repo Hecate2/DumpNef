@@ -17,12 +17,12 @@
     <RepositoryUrl>https://github.com/devhawk/DumpNef.git</RepositoryUrl>
     <RootNamespace>DevHawk.DumpNef</RootNamespace>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="4.1.0" />
-    <PackageReference Include="Neo" Version="3.6.0" />
+    <PackageReference Include="Neo" Version="3.7.6" />
     <PackageReference Include="Nito.Disposables" Version="2.5.0-alpha.1" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
     <PackageReference Include="OneOf" Version="3.0.255" />

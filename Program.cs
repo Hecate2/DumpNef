@@ -230,6 +230,15 @@ namespace DevHawk.DumpNef
                     : buffer.AsSpan(0, input.Length);
                 if (Convert.TryFromBase64String(input, span, out var bytesWritten))
                 {
+                    // support input of a base64 nef file
+                    try
+                    {
+                        var nefFile = NefFile.Parse(span[..bytesWritten].ToArray());
+                        script = nefFile.Script;
+                        tokens = nefFile.Tokens;
+                        return true;
+                    }catch (Exception _) { }
+
                     script = span[..bytesWritten].ToArray();
                     return true;
                 }
