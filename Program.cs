@@ -233,7 +233,7 @@ namespace DevHawk.DumpNef
                     // support input of a base64 nef file
                     try
                     {
-                        var nefFile = NefFile.Parse(span[..bytesWritten].ToArray());
+                        var nefFile = NefFile.Parse(span[..bytesWritten].ToArray(), verify: false);
                         script = nefFile.Script;
                         tokens = nefFile.Tokens;
                         return true;
